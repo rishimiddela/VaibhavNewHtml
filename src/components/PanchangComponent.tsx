@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { DateTime } from 'luxon';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { DALLAS, HYDERABAD, Location, calculateSunriseSunset, calculateMoonTimes, calculatePanchanga, calculateAuspiciousTimes } from '../services/timeService';
+import type { Location } from '../services/timeService';
+import { DALLAS, HYDERABAD, calculateSunriseSunset, calculateMoonTimes, calculatePanchanga, calculateAuspiciousTimes } from '../services/timeService';
 import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
@@ -145,7 +146,7 @@ const PanchangComponent: React.FC = () => {
       <div className="mb-6">
         <DatePicker
           selected={selectedDate}
-          onChange={(date: Date) => setSelectedDate(date)}
+          onChange={(date: Date | null) => date && setSelectedDate(date)}
           dateFormat="MMMM d, yyyy"
           className="p-2 border rounded"
         />

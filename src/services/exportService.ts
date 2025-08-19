@@ -29,23 +29,23 @@ export const exportToICS = (events: PanchangEvent[]) => {
   const icsEvents = events.map(event => ({
     title: event.title,
     description: event.description,
-    start: [
-      event.startTime.getFullYear(),
-      event.startTime.getMonth() + 1,
-      event.startTime.getDate(),
-      event.startTime.getHours(),
-      event.startTime.getMinutes()
-    ],
-    end: [
-      event.endTime.getFullYear(),
-      event.endTime.getMonth() + 1,
-      event.endTime.getDate(),
-      event.endTime.getHours(),
-      event.endTime.getMinutes()
-    ]
+    start: {
+      year: event.startTime.getFullYear(),
+      month: event.startTime.getMonth() + 1,
+      day: event.startTime.getDate(),
+      hour: event.startTime.getHours(),
+      minute: event.startTime.getMinutes()
+    },
+    end: {
+      year: event.endTime.getFullYear(),
+      month: event.endTime.getMonth() + 1,
+      day: event.endTime.getDate(),
+      hour: event.endTime.getHours(),
+      minute: event.endTime.getMinutes()
+    }
   }));
 
-  createEvents(icsEvents, (error, value) => {
+  createEvents(icsEvents as any, (error, value) => {
     if (error) {
       console.error(error);
       return;

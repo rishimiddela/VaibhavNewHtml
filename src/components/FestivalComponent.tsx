@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Festival } from '../services/festivalService';
+import type { Festival } from '../services/festivalService';
 import { DateTime } from 'luxon';
 
 interface FestivalComponentProps {

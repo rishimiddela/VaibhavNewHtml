@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import { Location } from './timeService';
+import type { Location } from './timeService';
 
 export interface Festival {
   name: string;

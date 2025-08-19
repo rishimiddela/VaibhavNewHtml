@@ -22,7 +22,8 @@ export const DateLocationPicker: React.FC<LocationPickerProps> = ({
   const [selectedDate, setSelectedDate] = useState(new Date());
   const { t } = useTranslation();
 
-  const handleDateChange = (date: Date) => {
+  const handleDateChange = (date: Date | null) => {
+    if (!date) return;
     setSelectedDate(date);
     onDateChange(date);
   };

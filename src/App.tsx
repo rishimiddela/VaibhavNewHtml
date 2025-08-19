@@ -9,7 +9,6 @@ import { exportToPDF, exportToICS } from './services/exportService';
 const queryClient = new QueryClient();
 
 function App() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedLocation, setSelectedLocation] = useState('dallas');
 
   // Mock data - replace with actual API call
@@ -68,7 +67,7 @@ function App() {
           </h1>
 
           <DateLocationPicker
-            onDateChange={setSelectedDate}
+            onDateChange={() => {}}
             onLocationChange={setSelectedLocation}
             defaultLocation={selectedLocation}
           />
