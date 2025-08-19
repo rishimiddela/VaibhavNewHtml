@@ -1,0 +1,45 @@
+{
+  "name": "vedic-calendar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/luxon": "^3.7.1",
+    "luxon": "^3.7.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@tanstack/react-query": "^5.85.5",
+    "@tanstack/react-query-devtools": "^5.85.5",
+    "@types/file-saver": "^2.0.7",
+    "@types/react": "^19.1.10",
+    "@types/react-datepicker": "^6.2.0",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "file-saver": "^2.0.5",
+    "globals": "^16.3.0",
+    "html2canvas": "^1.4.1",
+    "i18next": "^25.3.6",
+    "ics": "^3.8.1",
+    "jspdf": "^3.0.1",
+    "postcss": "^8.5.6",
+    "react-datepicker": "^8.6.0",
+    "react-i18next": "^15.6.1",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2"
+  }
+}
